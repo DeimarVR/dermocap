@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>DermoCapilar · Estética Avanzada & Dermocosmética | Pasto, Nariño</title>
+<meta name="description" content="DermoCapilar en Pasto, Nariño: dermocosmética de alta calidad y tratamientos estéticos profesionales para piel y cabello. Ciencia, belleza y asesoría experta." />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,400;9..144,500;9..144,600;9..144,700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
+<style>
+:root{
+  --cream:#f6f3ea; --cream-2:#efeadc; --paper:#fbfaf5;
+  --forest:#0b2e33; --forest-2:#0f3a40; --deep:#08262b;
+  --teal:#16a89a; --teal-d:#0e8479; --teal-l:#e2f4f1;
+  --green:#8fc73e; --green-d:#6fa72a;
+  --ink:#10302f; --muted:#5f7370; --muted-2:#8a9c98;
+  --gold:#c9a24e;
+  --line:rgba(11,46,51,.10); --line-d:rgba(255,255,255,.12);
+  --card:#ffffff;
+  --sh-sm:0 6px 20px -8px rgba(11,46,51,.14);
+  --sh:0 26px 50px -24px rgba(11,46,51,.30);
+  --sh-lg:0 40px 80px -30px rgba(11,46,51,.40);
+  --r:22px; --r-sm:14px; --r-lg:34px;
+  --disp:'Fraunces',Georgia,serif;
+  --sans:'Plus Jakarta Sans',system-ui,sans-serif;
+  --ease:cubic-bezier(.19,1,.22,1);
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--sans);color:var(--ink);background:var(--cream);line-height:1.6;-webkit-font-smoothing:antialiased;overflow-x:hidden}
+body::before{/* grain */
+  content:"";position:fixed;inset:0;z-index:1;pointer-events:none;opacity:.035;mix-blend-mode:multiply;
+  background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='120' height='120'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.9' numOctaves='3'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+img{max-width:100%;display:block}
+a{text-decoration:none;color:inherit}
+button{font-family:inherit;cursor:pointer;border:none;background:none}
+.wrap{max-width:1240px;margin:0 auto;padding:0 26px;position:relative;z-index:2}
+h1,h2,h3,h4{font-family:var(--disp);line-height:1.08;color:var(--forest);font-weight:500;letter-spacing:-.01em}
+.eyebrow{display:inline-flex;align-items:center;gap:9px;font-family:var(--sans);font-weight:600;letter-spacing:.22em;text-transform:uppercase;font-size:.68rem;color:var(--teal-d)}
+.eyebrow::before{content:"";width:26px;height:1.5px;background:var(--teal)}
+.eyebrow.c::before{display:none}
+.section{padding:96px 0;position:relative}
+.center{text-align:center}
+.display{font-size:clamp(2rem,4.6vw,3.5rem);font-weight:500}
+.display em{font-style:italic;color:var(--teal-d)}
+.lead{color:var(--muted);font-size:1.05rem;max-width:600px}
+.center .lead{margin-inline:auto}
+
+/* buttons */
+.btn{position:relative;display:inline-flex;align-items:center;gap:.6rem;font-family:var(--sans);font-weight:600;font-size:.95rem;padding:.95rem 1.7rem;border-radius:999px;transition:.4s var(--ease);overflow:hidden}
+.btn svg{width:18px;height:18px;position:relative;z-index:2}
+.btn span{position:relative;z-index:2}
+.btn-primary{background:var(--forest);color:#fff}
+.btn-primary::after{content:"";position:absolute;inset:0;background:linear-gradient(120deg,var(--teal),var(--green));transform:translateY(101%);transition:.45s var(--ease);z-index:1}
+.btn-primary:hover::after{transform:translateY(0)}
+.btn-primary:hover{color:var(--forest);transform:translateY(-2px)}
+.btn-ghost{background:transparent;color:var(--forest);border:1.5px solid var(--line)}
+.btn-ghost:hover{border-color:var(--forest);transform:translateY(-2px)}
+.btn-wa{background:linear-gradient(120deg,#22b365,#1f9d5a);color:#fff}
+.btn-wa:hover{transform:translateY(-2px);box-shadow:0 16px 30px -12px rgba(34,179,101,.7)}
+.btn-sm{padding:.62rem 1.1rem;font-size:.85rem}
+
+/* scroll progress + cursor glow */
+#progress{position:fixed;top:0;left:0;height:3px;width:0;background:linear-gradient(90deg,var(--teal),var(--green));z-index:200;transition:width .1s}
+#glow{position:fixed;width:520px;height:520px;border-radius:50%;pointer-events:none;z-index:0;transform:translate(-50%,-50%);background:radial-gradient(circle,rgba(22,168,154,.16),transparent 60%);transition:.2s;opacity:0}
+
+/* top strip */
+.strip{background:var(--deep);color:#bfe0dc;font-size:.8rem}
+.strip .wrap{display:flex;align-items:center;justify-content:space-between;gap:14px;height:40px}
+.strip .l{display:flex;gap:24px;align-items:center;flex-wrap:wrap}
+.strip .l span{display:inline-flex;align-items:center;gap:.45rem}
+.strip svg{width:14px;height:14px;color:var(--teal)}
+.strip .s{display:flex;gap:15px}
+.strip .s a{opacity:.8;transition:.2s}
+.strip .s a:hover{opacity:1;color:#fff}
+.strip .s svg{width:15px;height:15px;color:currentColor}
+
+/* header */
+header{position:sticky;top:0;z-index:120;transition:.4s var(--ease)}
+header .bar{margin:0 auto;display:flex;align-items:center;gap:26px;height:78px;max-width:1240px;padding:0 26px}
+header.scrolled{padding-top:10px}
+header.scrolled .bar{background:rgba(251,250,245,.75);backdrop-filter:blur(18px) saturate(1.4);border:1px solid var(--line);border-radius:999px;box-shadow:var(--sh-sm);height:64px;max-width:1180px}
+.brand{display:flex;align-items:center;gap:11px}
+.brand .mono{width:44px;height:44px;flex-shrink:0;display:block;filter:drop-shadow(0 5px 12px rgba(11,46,51,.2));transition:.3s var(--ease)}
+.brand .mono svg{width:100%;height:100%;display:block}
+header.scrolled .brand .mono{width:36px;height:36px}
+.brand .wm{display:flex;flex-direction:column;line-height:1}
+.brand .wm b{font-family:var(--disp);font-weight:600;font-size:1.2rem;letter-spacing:-.01em;color:var(--forest)}
+.brand .wm b i{font-style:italic;color:var(--teal-d)}
+.brand .wm small{font-family:var(--sans);font-weight:600;font-size:.5rem;letter-spacing:.26em;text-transform:uppercase;color:var(--teal-d);margin-top:4px}
+header.scrolled .brand .wm b{font-size:1.06rem}
+.brand.light .wm b{color:#fff}
+.brand.light .wm b i{color:var(--green)}
+.brand.light .wm small{color:var(--green)}
+.brand img{height:40px;width:auto;display:block;transition:.3s var(--ease)}
+header.scrolled .brand img{height:32px}
+.brand-f{display:inline-block;background:#fff;border-radius:13px;padding:10px 15px;box-shadow:var(--sh-sm)}
+.brand-f img{height:34px;width:auto;display:block}
+.nav{display:flex;gap:4px;margin-left:8px}
+.nav a{position:relative;font-weight:500;font-size:.94rem;color:var(--forest);padding:.55rem .9rem;border-radius:10px;transition:.2s}
+.nav a::after{content:"";position:absolute;left:.9rem;right:.9rem;bottom:.35rem;height:1.5px;background:var(--teal);transform:scaleX(0);transform-origin:left;transition:.3s var(--ease)}
+.nav a:hover::after{transform:scaleX(1)}
+.tools{margin-left:auto;display:flex;align-items:center;gap:12px}
+.search{position:relative;width:230px}
+.search input{width:100%;border:1.5px solid var(--line);border-radius:999px;padding:.6rem 2.5rem .6rem 1.1rem;font-family:inherit;font-size:.88rem;background:rgba(255,255,255,.6);transition:.25s}
+.search input:focus{outline:none;border-color:var(--teal);background:#fff;width:100%}
+.search .ic{position:absolute;right:14px;top:50%;transform:translateY(-50%);color:var(--muted)}
+.cart-btn{position:relative;width:46px;height:46px;border-radius:14px;background:var(--forest);color:#fff;display:grid;place-items:center;transition:.3s var(--ease)}
+.cart-btn:hover{background:var(--teal-d);transform:translateY(-2px)}
+.cart-btn .count{position:absolute;top:-7px;right:-7px;min-width:21px;height:21px;padding:0 5px;border-radius:999px;background:var(--green);color:var(--forest);font-weight:700;font-size:.7rem;display:grid;place-items:center;border:2px solid var(--cream)}
+.burger{display:none;width:46px;height:46px;border-radius:14px;background:var(--forest);color:#fff;place-items:center}
+
+/* hero */
+.hero{position:relative;padding:52px 0 90px;overflow:hidden}
+.aurora{position:absolute;inset:-20% -10% auto -10%;height:120%;z-index:0;filter:blur(60px);opacity:.7;pointer-events:none}
+.aurora span{position:absolute;border-radius:50%;mix-blend-mode:multiply;animation:float 14s var(--ease) infinite alternate}
+.aurora .a1{width:460px;height:460px;background:radial-gradient(circle,#8fc73e88,transparent 70%);top:0;left:8%}
+.aurora .a2{width:520px;height:520px;background:radial-gradient(circle,#16a89a88,transparent 70%);top:6%;right:6%;animation-delay:-4s}
+.aurora .a3{width:380px;height:380px;background:radial-gradient(circle,#0b2e3355,transparent 70%);top:34%;left:44%;animation-delay:-8s}
+@keyframes float{to{transform:translate(30px,-26px) scale(1.12)}}
+.hero .wrap{display:grid;grid-template-columns:1.02fr .98fr;gap:50px;align-items:center}
+.hero-badge{display:inline-flex;align-items:center;gap:10px;background:rgba(255,255,255,.7);border:1px solid var(--line);backdrop-filter:blur(6px);padding:.4rem .4rem .4rem .9rem;border-radius:999px;font-size:.78rem;font-weight:600;color:var(--forest);margin-bottom:26px}
+.hero-badge b{background:var(--forest);color:#fff;padding:.25rem .6rem;border-radius:999px;font-size:.7rem}
+.hero h1{font-size:clamp(2.7rem,6vw,4.7rem);font-weight:500;letter-spacing:-.03em}
+.hero h1 em{font-style:italic;background:linear-gradient(110deg,var(--teal-d),var(--green-d));-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.hero p.lead{margin:1.5rem 0 2rem;max-width:460px;font-size:1.12rem}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;align-items:center}
+.hero .trust{display:flex;gap:12px;margin-top:2.6rem;flex-wrap:wrap}
+.hero .trust .t{display:flex;align-items:center;gap:.55rem;font-size:.82rem;font-weight:600;color:var(--forest);background:rgba(255,255,255,.55);border:1px solid var(--line);padding:.5rem .85rem;border-radius:999px}
+.hero .trust .t svg{width:17px;height:17px;color:var(--teal-d)}
+
+/* hero bento visual */
+.bento{display:grid;grid-template-columns:1.3fr 1fr;grid-template-rows:auto auto;gap:16px}
+.bento .cell{border-radius:var(--r);position:relative;overflow:hidden;box-shadow:var(--sh)}
+.bento .main{grid-row:1/3;min-height:420px;background:
+  linear-gradient(160deg,#c8ece6,#a7dcd2 55%,#bfe08f);display:flex;flex-direction:column;justify-content:flex-end;padding:24px;color:var(--forest)}
+.bento .main .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:10px;color:rgba(11,46,51,.42)}
+.bento .main .ph svg{width:58px;height:58px;opacity:.55}
+.bento .main .ph span{font-size:.68rem;letter-spacing:.18em;text-transform:uppercase;font-weight:600}
+.bento .main img.bimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.bento .main .cap{position:relative;z-index:2;background:rgba(255,255,255,.7);backdrop-filter:blur(8px);border-radius:16px;padding:14px 16px;width:fit-content}
+.bento .main .cap b{font-family:var(--disp);font-size:1.15rem;display:block}
+.bento .main .cap small{color:var(--muted);font-size:.78rem}
+.bento .stat{background:var(--forest);color:#fff;padding:22px;display:flex;flex-direction:column;justify-content:center;min-height:200px}
+.bento .stat b{font-family:var(--disp);font-size:2.9rem;font-weight:500;line-height:1;background:linear-gradient(120deg,#fff,#bfe08f);-webkit-background-clip:text;background-clip:text;-webkit-text-fill-color:transparent}
+.bento .stat small{color:#a9cdc8;font-size:.82rem;margin-top:6px}
+.bento .rate{background:#fff;padding:20px;display:flex;flex-direction:column;justify-content:center;min-height:200px}
+.bento .rate .stars{color:var(--gold);letter-spacing:2px;font-size:1rem}
+.bento .rate b{font-family:var(--disp);font-size:2rem;margin-top:4px}
+.bento .rate small{color:var(--muted);font-size:.78rem}
+
+/* marquee */
+.marquee{background:var(--forest);color:#cfeae6;padding:16px 0;overflow:hidden;border-block:1px solid var(--line-d)}
+.marquee .t{display:flex;gap:52px;white-space:nowrap;width:max-content;animation:scrollx 28s linear infinite;font-family:var(--disp);font-style:italic;font-size:1.05rem}
+.marquee .t span{display:inline-flex;align-items:center;gap:14px}
+.marquee .t span::before{content:"✦";color:var(--green);font-style:normal}
+@keyframes scrollx{to{transform:translateX(-50%)}}
+
+/* section head */
+.shead{display:flex;align-items:flex-end;justify-content:space-between;gap:24px;margin-bottom:14px;flex-wrap:wrap}
+.shead .display{max-width:640px}
+
+/* products */
+.pills{display:flex;gap:10px;flex-wrap:wrap;margin:28px 0 34px}
+.pills button{font-family:var(--sans);font-weight:600;font-size:.85rem;padding:.55rem 1.15rem;border-radius:999px;background:transparent;color:var(--forest);border:1.5px solid var(--line);transition:.3s var(--ease)}
+.pills button:hover{border-color:var(--teal)}
+.pills button.active{background:var(--forest);color:#fff;border-color:var(--forest)}
+.grid{display:grid;grid-template-columns:repeat(4,1fr);gap:22px}
+.card{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);overflow:hidden;transition:.45s var(--ease);display:flex;flex-direction:column}
+.card:hover{transform:translateY(-8px);box-shadow:var(--sh);border-color:transparent}
+.card .thumb{aspect-ratio:1/1;position:relative;overflow:hidden;background:radial-gradient(120% 120% at 30% 20%,#eef7f4,#dcefe9);transition:.5s var(--ease)}
+.card .thumb .ph{position:absolute;inset:0;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;color:var(--muted-2)}
+.card .thumb .ph svg{width:42px;height:42px;opacity:.45}
+.card .thumb .ph span{font-size:.64rem;letter-spacing:.16em;text-transform:uppercase;font-weight:600;opacity:.75}
+.card .thumb img.pimg{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:.6s var(--ease)}
+.card:hover .thumb img.pimg{transform:scale(1.06)}
+.tag{position:absolute;top:12px;left:12px;background:var(--forest);color:#fff;font-family:var(--sans);font-weight:600;font-size:.66rem;letter-spacing:.05em;padding:.32rem .62rem;border-radius:999px;text-transform:uppercase}
+.tag.sale{background:var(--green-d)}
+.fav{position:absolute;top:10px;right:10px;width:36px;height:36px;border-radius:50%;background:rgba(255,255,255,.85);backdrop-filter:blur(4px);display:grid;place-items:center;color:var(--muted);transition:.25s}
+.fav:hover,.fav.on{color:#e8617f;transform:scale(1.1)}
+.card .qadd{position:absolute;left:12px;right:12px;bottom:12px;background:var(--forest);color:#fff;border-radius:12px;padding:.7rem;font-family:var(--sans);font-weight:600;font-size:.85rem;display:flex;align-items:center;justify-content:center;gap:.5rem;opacity:0;transform:translateY(12px);transition:.4s var(--ease)}
+.card .thumb:hover .qadd{opacity:1;transform:none}
+.card .qadd:hover{background:var(--teal-d)}
+.card .body{padding:16px 17px 18px;display:flex;flex-direction:column;flex:1}
+.card .cat{font-family:var(--sans);font-size:.68rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;color:var(--teal-d)}
+.card h3{font-family:var(--disp);font-size:1.12rem;font-weight:500;margin:.28rem 0 .34rem}
+.card .desc{font-size:.83rem;color:var(--muted);flex:1;margin-bottom:.7rem}
+.card .rrow{display:flex;align-items:center;gap:6px;font-size:.76rem;color:var(--muted);margin-bottom:.7rem}
+.card .rrow .st{color:var(--gold)}
+.prow{display:flex;align-items:center;justify-content:space-between;gap:8px;margin-top:auto}
+.price{font-family:var(--disp);font-weight:600;font-size:1.32rem;color:var(--forest)}
+.price s{font-family:var(--sans);font-weight:500;font-size:.8rem;color:var(--muted-2);margin-left:6px}
+.add{width:44px;height:44px;border-radius:13px;background:var(--teal-l);color:var(--teal-d);display:grid;place-items:center;transition:.3s var(--ease);flex-shrink:0}
+.add:hover{background:var(--forest);color:#fff;transform:rotate(90deg)}
+.empty{grid-column:1/-1;text-align:center;color:var(--muted);padding:50px}
+
+/* split feature (services) */
+.services{background:var(--forest);color:#eaf4f2;border-radius:var(--r-lg);margin:0 26px;padding:78px 0}
+.services .wrap{max-width:1180px}
+.services h2,.services h3{color:#fff}
+.services .eyebrow{color:var(--green)}
+.services .eyebrow::before{background:var(--green)}
+.services .lead{color:#a9cdc8}
+.svc-list{margin-top:40px;border-top:1px solid var(--line-d)}
+.svc{display:grid;grid-template-columns:60px 1.1fr 1.5fr auto;gap:24px;align-items:center;padding:26px 10px;border-bottom:1px solid var(--line-d);transition:.4s var(--ease);position:relative}
+.svc:hover{padding-inline:26px;background:rgba(255,255,255,.04)}
+.svc .num{font-family:var(--disp);font-size:1.1rem;color:var(--green)}
+.svc .nm{display:flex;align-items:center;gap:14px}
+.svc .nm .ic{font-size:1.7rem}
+.svc .nm b{font-family:var(--disp);font-size:1.32rem;font-weight:500;color:#fff}
+.svc .ds{color:#a9cdc8;font-size:.9rem}
+.svc .rt{display:flex;flex-direction:column;align-items:flex-end;gap:8px}
+.svc .rt .from{font-family:var(--disp);color:#fff;font-size:1rem;white-space:nowrap}
+.svc-note{margin-top:22px;color:#a9cdc8;font-size:.85rem;text-align:center}
+
+/* bento why */
+.why{display:grid;grid-template-columns:repeat(3,1fr);grid-auto-rows:1fr;gap:18px;margin-top:44px}
+.why .w{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px;transition:.4s var(--ease);position:relative;overflow:hidden}
+.why .w:hover{transform:translateY(-6px);box-shadow:var(--sh);background:#fff}
+.why .w .ic{width:56px;height:56px;border-radius:16px;background:var(--teal-l);display:grid;place-items:center;margin-bottom:18px;transition:.4s var(--ease);color:var(--teal-d)}
+.why .w .ic svg{width:26px;height:26px}
+.why .w:hover .ic{background:var(--forest);transform:rotate(-8deg);color:#fff}
+.why .big .ic{color:#fff}
+.why .w h4{font-family:var(--disp);font-size:1.28rem;font-weight:500;margin-bottom:.5rem}
+.why .w p{font-size:.9rem;color:var(--muted)}
+.why .big{grid-column:span 1;background:linear-gradient(150deg,var(--teal),var(--teal-d));color:#fff;display:flex;flex-direction:column;justify-content:center}
+.why .big h4,.why .big p{color:#fff}
+.why .big p{color:#dff3ef}
+
+/* testimonials */
+.tst-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;margin-top:42px}
+.tst{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:30px;position:relative}
+.tst .q{font-family:var(--disp);font-size:3.4rem;line-height:.6;color:var(--teal);opacity:.35;height:26px}
+.tst p{font-size:.98rem;color:var(--forest);margin:.6rem 0 1.3rem}
+.tst .who{display:flex;align-items:center;gap:12px}
+.tst .who .av{width:46px;height:46px;border-radius:50%;background:linear-gradient(135deg,var(--teal),var(--green));display:grid;place-items:center;color:#fff;font-family:var(--disp);font-weight:600;font-size:1.1rem}
+.tst .who b{display:block;font-family:var(--disp);font-size:.98rem;font-weight:600}
+.tst .who small{color:var(--muted);font-size:.78rem}
+
+/* CTA */
+.cta-band{position:relative;overflow:hidden;background:var(--deep);color:#fff;border-radius:var(--r-lg);padding:70px 40px;text-align:center}
+.cta-band .aur{position:absolute;inset:0;opacity:.5;filter:blur(50px)}
+.cta-band .aur span{position:absolute;width:340px;height:340px;border-radius:50%}
+.cta-band .aur .x1{background:radial-gradient(circle,#16a89a,transparent 70%);top:-120px;left:-60px}
+.cta-band .aur .x2{background:radial-gradient(circle,#8fc73e,transparent 70%);bottom:-140px;right:-60px}
+.cta-band h2{color:#fff;font-size:clamp(1.9rem,4vw,3rem);position:relative}
+.cta-band h2 em{font-style:italic;color:var(--green)}
+.cta-band p{color:#bfe0dc;max-width:540px;margin:1rem auto 2rem;position:relative}
+.cta-band .g{display:flex;gap:14px;justify-content:center;flex-wrap:wrap;position:relative}
+.cta-band .btn-ghost{color:#fff;border-color:rgba(255,255,255,.35)}
+.cta-band .btn-ghost:hover{border-color:#fff}
+
+/* footer */
+footer{background:var(--deep);color:#a9c5c1;padding:70px 0 28px}
+.f-grid{display:grid;grid-template-columns:1.5fr 1fr 1fr 1.4fr;gap:40px}
+.f-logo{background:#fff;border-radius:14px;padding:12px 16px;width:fit-content}
+.f-logo img{height:40px}
+footer .about{font-size:.9rem;margin:18px 0;max-width:290px;color:#8fb1ad;line-height:1.7}
+.f-soc{display:flex;gap:10px}
+.f-soc a{width:40px;height:40px;border-radius:12px;background:rgba(255,255,255,.07);display:grid;place-items:center;transition:.3s var(--ease)}
+.f-soc a:hover{background:var(--teal);color:#fff;transform:translateY(-3px)}
+.f-soc svg{width:18px;height:18px}
+footer h4{font-family:var(--disp);color:#fff;font-size:1.05rem;font-weight:500;margin-bottom:18px}
+footer ul{list-style:none}
+footer ul li{margin-bottom:.65rem}
+footer ul li a{font-size:.89rem;color:#8fb1ad;transition:.2s}
+footer ul li a:hover{color:var(--green);padding-left:4px}
+.f-contact li{display:flex;gap:11px;font-size:.87rem;margin-bottom:1rem;color:#8fb1ad}
+.f-contact li svg{width:17px;height:17px;color:var(--teal);flex-shrink:0;margin-top:3px}
+.f-bottom{border-top:1px solid var(--line-d);margin-top:46px;padding-top:24px;display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap;font-size:.8rem;color:#6d908c}
+
+/* reservas */
+.reserva{background:var(--cream-2)}
+.res-grid{display:grid;grid-template-columns:.92fr 1.08fr;gap:38px;align-items:start;margin-top:44px}
+.res-info h3{font-family:var(--disp);font-size:1.5rem;font-weight:500;margin-bottom:.6rem}
+.res-info p{color:var(--muted);font-size:.95rem;margin-bottom:24px;max-width:420px}
+.res-steps{list-style:none;margin-bottom:28px}
+.res-steps li{display:flex;gap:14px;margin-bottom:16px;font-size:.92rem;color:var(--forest)}
+.res-steps li .n{flex-shrink:0;width:30px;height:30px;border-radius:50%;background:var(--forest);color:#fff;font-family:var(--disp);font-size:.9rem;display:grid;place-items:center}
+.res-steps li b{font-family:var(--disp);font-weight:600}
+.res-hours{background:var(--paper);border:1px solid var(--line);border-radius:var(--r);padding:22px 24px}
+.res-hours h4{font-family:var(--sans);font-size:.72rem;letter-spacing:.16em;text-transform:uppercase;color:var(--teal-d);margin-bottom:12px;font-weight:700}
+.res-hours li{display:flex;justify-content:space-between;padding:.55rem 0;border-bottom:1px solid var(--line);font-size:.9rem;color:var(--forest);list-style:none}
+.res-hours li:last-child{border-bottom:none}
+.res-hours li span{color:var(--muted)}
+.res-form{background:var(--paper);border:1px solid var(--line);border-radius:var(--r-lg);padding:34px;box-shadow:var(--sh)}
+.res-form h3{font-family:var(--disp);font-size:1.4rem;font-weight:500;margin-bottom:4px}
+.res-form .sub{color:var(--muted);font-size:.88rem;margin-bottom:24px}
+.field{margin-bottom:18px}
+.field label{display:block;font-size:.78rem;font-weight:700;color:var(--forest);margin-bottom:.5rem;letter-spacing:.02em}
+.field input,.field select,.field textarea{width:100%;border:1.5px solid var(--line);border-radius:14px;padding:.85rem 1rem;font-family:inherit;font-size:.94rem;background:#fff;color:var(--ink);transition:.2s}
+.field input:focus,.field select:focus,.field textarea:focus{outline:none;border-color:var(--teal);box-shadow:0 0 0 4px var(--teal-l)}
+.field textarea{resize:vertical;min-height:78px}
+.field select{appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' fill='none' stroke='%235f7370' stroke-width='2'%3E%3Cpath d='M4 6l4 4 4-4'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 14px center;padding-right:2.4rem}
+.row2{display:grid;grid-template-columns:1fr 1fr;gap:16px}
+.slots{display:flex;flex-wrap:wrap;gap:8px}
+.slots button{font-family:var(--sans);font-weight:600;font-size:.85rem;padding:.55rem .9rem;border-radius:11px;background:#fff;color:var(--forest);border:1.5px solid var(--line);transition:.2s}
+.slots button:hover{border-color:var(--teal)}
+.slots button.on{background:var(--forest);color:#fff;border-color:var(--forest)}
+.res-err{color:#d9435f;font-size:.83rem;margin:-6px 0 12px;display:none}
+.res-form .btn{width:100%;justify-content:center;padding:1.05rem;font-size:1rem;margin-top:6px}
+.res-form .fine{text-align:center;font-size:.74rem;color:var(--muted);margin-top:12px}
+
+/* cart drawer */
+.overlay{position:fixed;inset:0;background:rgba(8,38,43,.55);backdrop-filter:blur(4px);opacity:0;visibility:hidden;transition:.35s;z-index:150}
+.overlay.open{opacity:1;visibility:visible}
+.drawer{position:fixed;top:0;right:0;height:100%;width:428px;max-width:93vw;background:var(--paper);z-index:160;transform:translateX(100%);transition:transform .5s var(--ease);display:flex;flex-direction:column;box-shadow:var(--sh-lg)}
+.drawer.open{transform:none}
+.drawer .head{display:flex;align-items:center;justify-content:space-between;padding:24px;border-bottom:1px solid var(--line)}
+.drawer .head h3{font-family:var(--disp);font-size:1.35rem;font-weight:500}
+.drawer .head .x{width:40px;height:40px;border-radius:12px;background:var(--cream-2);display:grid;place-items:center;color:var(--forest);transition:.2s}
+.drawer .head .x:hover{background:var(--forest);color:#fff}
+.cart-items{flex:1;overflow-y:auto;padding:14px 24px}
+.cart-empty{text-align:center;color:var(--muted);padding:70px 20px}
+.cart-empty .big{font-size:3.2rem;margin-bottom:12px}
+.ci{display:flex;gap:14px;padding:16px 0;border-bottom:1px solid var(--line)}
+.ci .th{width:66px;height:66px;border-radius:14px;background:radial-gradient(120% 120% at 30% 20%,#eef7f4,#dcefe9);display:grid;place-items:center;font-size:1.9rem;flex-shrink:0}
+.ci .in{flex:1;min-width:0}
+.ci .in b{font-family:var(--disp);font-size:.98rem;font-weight:600;display:block}
+.ci .in .p{color:var(--teal-d);font-weight:700;font-family:var(--sans);font-size:.9rem;margin-top:2px}
+.ci .qty{display:flex;align-items:center;gap:8px;margin-top:9px}
+.ci .qty button{width:28px;height:28px;border-radius:9px;background:var(--cream-2);color:var(--forest);font-weight:700;display:grid;place-items:center;transition:.15s}
+.ci .qty button:hover{background:var(--forest);color:#fff}
+.ci .qty span{font-family:var(--disp);font-weight:600;min-width:20px;text-align:center}
+.ci .rm{color:var(--muted-2);font-size:.74rem;align-self:flex-start;transition:.2s}
+.ci .rm:hover{color:#e8617f}
+.drawer .foot{border-top:1px solid var(--line);padding:22px 24px;background:var(--cream)}
+.ship{font-size:.8rem;color:var(--muted);text-align:center;margin-bottom:12px}
+.ship b{color:var(--green-d)}
+.ship .bar{height:6px;border-radius:999px;background:var(--cream-2);margin-top:8px;overflow:hidden}
+.ship .bar i{display:block;height:100%;background:linear-gradient(90deg,var(--teal),var(--green));transition:.5s var(--ease)}
+.total{display:flex;justify-content:space-between;align-items:baseline;margin-bottom:16px}
+.total span{color:var(--muted)}
+.total b{font-family:var(--disp);font-size:1.7rem;color:var(--forest)}
+.drawer .foot .btn{width:100%;justify-content:center;font-size:1rem;padding:1.05rem}
+.drawer .note{text-align:center;font-size:.74rem;color:var(--muted);margin-top:10px}
+
+/* wa float + toast */
+.wa{position:fixed;bottom:26px;right:26px;width:60px;height:60px;border-radius:50%;background:linear-gradient(135deg,#25d366,#1f9d5a);display:grid;place-items:center;box-shadow:0 16px 34px -10px rgba(37,211,102,.7);z-index:130;transition:.3s var(--ease);animation:pulse 2.6s infinite}
+.wa:hover{transform:scale(1.1) rotate(6deg)}
+.wa svg{width:31px;height:31px;color:#fff}
+@keyframes pulse{0%{box-shadow:0 16px 34px -10px rgba(37,211,102,.7),0 0 0 0 rgba(37,211,102,.45)}70%{box-shadow:0 16px 34px -10px rgba(37,211,102,.7),0 0 0 18px rgba(37,211,102,0)}100%{box-shadow:0 16px 34px -10px rgba(37,211,102,.7),0 0 0 0 rgba(37,211,102,0)}}
+.toast{position:fixed;bottom:104px;left:50%;transform:translateX(-50%) translateY(20px);background:var(--forest);color:#fff;padding:.9rem 1.5rem;border-radius:999px;font-family:var(--sans);font-weight:600;font-size:.9rem;box-shadow:var(--sh-lg);z-index:170;opacity:0;visibility:hidden;transition:.35s var(--ease);display:flex;align-items:center;gap:.6rem}
+.toast.show{opacity:1;visibility:visible;transform:translateX(-50%)}
+.toast svg{width:18px;height:18px;color:var(--green)}
+
+/* reveal (solo se oculta si JS está activo; failsafe garantiza visibilidad) */
+.js .reveal{opacity:0;transform:translateY(34px);transition:.9s var(--ease)}
+.js .reveal.in{opacity:1;transform:none}
+
+/* mobile menu */
+.mm{position:fixed;inset:0;background:var(--cream);z-index:140;transform:translateX(100%);transition:.45s var(--ease);padding:90px 32px 32px;display:flex;flex-direction:column;gap:6px;overflow-y:auto}
+.mm:target{transform:none}
+.mm a{font-family:var(--disp);font-size:1.5rem;font-weight:500;padding:16px 0;border-bottom:1px solid var(--line);color:var(--forest)}
+.mm .x{position:absolute;top:26px;right:26px;width:46px;height:46px;border-radius:13px;background:var(--forest);color:#fff;display:grid;place-items:center}
+
+@media(max-width:1080px){.grid{grid-template-columns:repeat(3,1fr)}.why{grid-template-columns:repeat(2,1fr)}.svc{grid-template-columns:44px 1fr auto;gap:16px}.svc .ds{display:none}}
+@media(max-width:900px){
+  .hero .wrap{grid-template-columns:1fr;gap:40px}
+  .bento{max-width:460px;margin:0 auto;width:100%}
+  .nav,.search{display:none}.burger{display:grid}
+  .strip .l span:not(:first-child){display:none}
+  .tst-grid{grid-template-columns:1fr 1fr}
+  .f-grid{grid-template-columns:1fr 1fr}
+  .res-grid{grid-template-columns:1fr;gap:28px}
+}
+@media(max-width:640px){
+  .section{padding:64px 0}
+  .grid{grid-template-columns:repeat(2,1fr);gap:14px}
+  .why,.tst-grid,.f-grid{grid-template-columns:1fr}
+  .services{margin:0 14px;border-radius:26px}
+  .svc{grid-template-columns:1fr auto;gap:12px}.svc .num{display:none}
+  .strip{display:none}
+  .card .qadd{opacity:1;transform:none;position:static;margin-top:10px}
+  .card .thumb .em{font-size:2.7rem}
+  .cta-band{padding:50px 24px}
+  .drawer{width:100%}
+}
+@media(max-width:400px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div id="progress"></div>
+<div id="glow"></div>
+
+<!-- STRIP -->
+<div class="strip">
+  <div class="wrap">
+    <div class="l">
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(+57) 312 738 8081</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>CC. Sebastián de Belalcázar, Torre B · Consultorio 202 — Pasto</span>
+      <span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>dermocapilardc@gmail.com</span>
+    </div>
+    <div class="s">
+      <a href="https://www.instagram.com/dermocapilarpasto/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+      <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+      <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8.5a5 5 0 0 0 4 2v-3a2 2 0 0 1-2-2h-3v11a2.5 2.5 0 1 1-2.5-2.5c.2 0 .4 0 .5.05V8.5a5.5 5.5 0 1 0 5.5 5.5z"/></svg></a>
+      <a href="https://wa.me/573127388081" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg></a>
+    </div>
+  </div>
+</div>
+
+<!-- HEADER -->
+<header id="header">
+  <div class="bar">
+    <a href="#inicio" class="brand" aria-label="DermoCapilar"><img src="data:image/png;base64,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" alt="DermoCapilar" /></a>
+    <nav class="nav">
+      <a href="#inicio">Inicio</a>
+      <a href="#productos">Tienda</a>
+      <a href="#servicios">Tratamientos</a>
+      <a href="#reservas">Reservas</a>
+      <a href="#nosotros">Nosotros</a>
+      <a href="#contacto">Contacto</a>
+    </nav>
+    <div class="tools">
+      <div class="search">
+        <input id="search" type="text" placeholder="Buscar producto..." />
+        <span class="ic"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="11" cy="11" r="8"/><path d="m21 21-4.3-4.3"/></svg></span>
+      </div>
+      <button class="cart-btn" onclick="openCart()" aria-label="Carrito">
+        <svg width="21" height="21" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 2 3 6v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2V6l-3-4z"/><path d="M3 6h18"/><path d="M16 10a4 4 0 0 1-8 0"/></svg>
+        <span class="count" id="cartCount">0</span>
+      </button>
+      <a class="burger" href="#menu" role="button" aria-label="Abrir menú"><svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 6h18M3 12h18M3 18h18"/></svg></a>
+    </div>
+  </div>
+</header>
+
+<!-- MOBILE MENU -->
+<nav class="mm" id="menu">
+  <a class="x" href="#inicio" role="button" aria-label="Cerrar menú"><svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></a>
+  <a href="#inicio">Inicio</a>
+  <a href="#productos">Tienda</a>
+  <a href="#servicios">Tratamientos</a>
+  <a href="#reservas">Reservas</a>
+  <a href="#nosotros">Nosotros</a>
+  <a href="#contacto">Contacto</a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="inicio">
+  <div class="aurora"><span class="a1"></span><span class="a2"></span><span class="a3"></span></div>
+  <div class="wrap">
+    <div>
+      <div class="hero-badge"><b>NUEVO</b> Dermocosmética + Estética avanzada en Pasto</div>
+      <h1>Ciencia que revela tu <em>belleza radiante</em></h1>
+      <p class="lead">Productos dermocosméticos de alta calidad y tratamientos estéticos profesionales para tu piel y cabello, respaldados por expertos.</p>
+      <div class="cta">
+        <a href="#productos" class="btn btn-primary"><span>Explorar la tienda</span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg></a>
+        <a href="#servicios" class="btn btn-ghost"><span>Ver tratamientos</span></a>
+      </div>
+      <div class="trust">
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg>Envío gratis +$100k</div>
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>Productos certificados</div>
+        <div class="t"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2l3 6 6 .5-4.5 4 1.5 6-6-3.5L6 18.5 7.5 12.5 3 8.5 9 8z"/></svg>Calidad premium</div>
+      </div>
+    </div>
+    <div class="bento reveal">
+      <div class="cell main">
+        <!-- Reemplaza por: <img class="bimg" src="tu-foto.jpg" alt="Tratamiento facial"> -->
+        <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Foto principal</span></div>
+        <div class="cap"><b>Tratamiento facial</b><small>Resultados visibles y naturales</small></div>
+      </div>
+      <div class="cell stat"><b id="heroStat">500+</b><small>Clientes felices atendidas</small></div>
+      <div class="cell rate"><div class="stars">★★★★★</div><b>5.0</b><small>Calificación perfecta</small></div>
+    </div>
+  </div>
+</section>
+
+<!-- MARQUEE -->
+<div class="marquee">
+  <div class="t">
+    <span>Dermocosmética profesional</span><span>Asesoría personalizada</span><span>Productos originales</span><span>Envíos a toda Colombia</span><span>Especialistas certificados</span>
+    <span>Dermocosmética profesional</span><span>Asesoría personalizada</span><span>Productos originales</span><span>Envíos a toda Colombia</span><span>Especialistas certificados</span>
+  </div>
+</div>
+
+<!-- PRODUCTS -->
+<section class="section" id="productos">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div>
+        <span class="eyebrow">La tienda</span>
+        <h2 class="display" style="margin-top:.5rem">Dermocosmética<br><em>seleccionada</em> para ti</h2>
+      </div>
+      <p class="lead" style="max-width:320px">Selección premium respaldada por dermatólogos, para el cuidado real de tu piel y cabello.</p>
+    </div>
+    <div class="pills reveal" id="pills"><button class="active" onclick="filterCat('Todos',this)">Todos</button><button class="" onclick="filterCat('Facial',this)">Facial</button><button class="" onclick="filterCat('Solar',this)">Solar</button><button class="" onclick="filterCat('Capilar',this)">Capilar</button><button class="" onclick="filterCat('Corporal',this)">Corporal</button></div>
+    <div class="grid" id="grid">
+      <div class="card reveal" data-cat="Facial" data-name="Sérum Vitamina C 15%">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Facial</span></div>
+          <span class="tag ">Bestseller</span>
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(1)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Facial</span>
+          <h3>Sérum Vitamina C 15%</h3>
+          <p class="desc">Ilumina, unifica el tono y aporta antioxidantes. Uso diario AM.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 5.0 · 128 reseñas</div>
+          <div class="prow"><div class="price">$89.000<s>$109.000</s></div>
+            <button class="add" onclick="addToCart(1)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Solar" data-name="Protector Solar FPS 50+">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Solar</span></div>
+          
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(2)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Solar</span>
+          <h3>Protector Solar FPS 50+</h3>
+          <p class="desc">Toque seco, antimanchas y con color. Protección UVA/UVB.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.9 · 96 reseñas</div>
+          <div class="prow"><div class="price">$76.000</div>
+            <button class="add" onclick="addToCart(2)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Facial" data-name="Ácido Hialurónico Puro">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Facial</span></div>
+          
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(3)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Facial</span>
+          <h3>Ácido Hialurónico Puro</h3>
+          <p class="desc">Hidratación profunda y efecto relleno. Todo tipo de piel.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 5.0 · 74 reseñas</div>
+          <div class="prow"><div class="price">$95.000</div>
+            <button class="add" onclick="addToCart(3)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Capilar" data-name="Shampoo Anticaída">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Capilar</span></div>
+          <span class="tag sale">Oferta</span>
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(4)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Capilar</span>
+          <h3>Shampoo Anticaída</h3>
+          <p class="desc">Reduce la caída y estimula el crecimiento capilar.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.8 · 143 reseñas</div>
+          <div class="prow"><div class="price">$68.000<s>$82.000</s></div>
+            <button class="add" onclick="addToCart(4)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Facial" data-name="Retinol Nocturno">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Facial</span></div>
+          <span class="tag ">Nuevo</span>
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(5)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Facial</span>
+          <h3>Retinol Nocturno</h3>
+          <p class="desc">Reduce líneas de expresión y renueva la piel mientras duermes.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.9 · 51 reseñas</div>
+          <div class="prow"><div class="price">$112.000</div>
+            <button class="add" onclick="addToCart(5)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Capilar" data-name="Ampolla Capilar Reparadora">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Capilar</span></div>
+          
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(6)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Capilar</span>
+          <h3>Ampolla Capilar Reparadora</h3>
+          <p class="desc">Repara puntas y aporta brillo. Tratamiento intensivo.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.7 · 88 reseñas</div>
+          <div class="prow"><div class="price">$42.000</div>
+            <button class="add" onclick="addToCart(6)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Corporal" data-name="Crema Corporal Reafirmante">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Corporal</span></div>
+          <span class="tag sale">Oferta</span>
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(7)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Corporal</span>
+          <h3>Crema Corporal Reafirmante</h3>
+          <p class="desc">Firmeza y elasticidad con cafeína y colágeno.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.8 · 64 reseñas</div>
+          <div class="prow"><div class="price">$73.000<s>$89.000</s></div>
+            <button class="add" onclick="addToCart(7)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Facial" data-name="Limpiador Facial Suave">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Facial</span></div>
+          
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(8)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Facial</span>
+          <h3>Limpiador Facial Suave</h3>
+          <p class="desc">Limpieza profunda sin resecar. Ideal piel sensible.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.9 · 110 reseñas</div>
+          <div class="prow"><div class="price">$54.000</div>
+            <button class="add" onclick="addToCart(8)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Facial" data-name="Tónico Niacinamida 10%">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Facial</span></div>
+          
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(9)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Facial</span>
+          <h3>Tónico Niacinamida 10%</h3>
+          <p class="desc">Controla grasa, minimiza poros y calma la piel.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.8 · 79 reseñas</div>
+          <div class="prow"><div class="price">$64.000</div>
+            <button class="add" onclick="addToCart(9)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Capilar" data-name="Aceite Capilar Nutritivo">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Capilar</span></div>
+          <span class="tag sale">Oferta</span>
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(10)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Capilar</span>
+          <h3>Aceite Capilar Nutritivo</h3>
+          <p class="desc">Nutre, desenreda y aporta brillo sin efecto graso.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.9 · 57 reseñas</div>
+          <div class="prow"><div class="price">$58.000<s>$70.000</s></div>
+            <button class="add" onclick="addToCart(10)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Corporal" data-name="Exfoliante Corporal Café">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Corporal</span></div>
+          
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(11)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Corporal</span>
+          <h3>Exfoliante Corporal Café</h3>
+          <p class="desc">Elimina células muertas y suaviza la piel al instante.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 4.7 · 41 reseñas</div>
+          <div class="prow"><div class="price">$48.000</div>
+            <button class="add" onclick="addToCart(11)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="card reveal" data-cat="Facial" data-name="Contorno de Ojos Antiedad">
+        <div class="thumb">
+          <div class="ph"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg><span>Facial</span></div>
+          <span class="tag ">Bestseller</span>
+          <button class="fav" onclick="this.classList.toggle('on')" aria-label="Favorito"><svg width="17" height="17" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20.8 4.6a5.5 5.5 0 0 0-7.8 0L12 5.7l-1-1.1a5.5 5.5 0 0 0-7.8 7.8l1 1.1L12 21l7.8-7.5 1-1.1a5.5 5.5 0 0 0 0-7.8z"/></svg></button>
+          <button class="qadd" onclick="addToCart(12)"><svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg>Agregar al carrito</button>
+        </div>
+        <div class="body">
+          <span class="cat">Facial</span>
+          <h3>Contorno de Ojos Antiedad</h3>
+          <p class="desc">Reduce ojeras y bolsas. Mirada descansada.</p>
+          <div class="rrow"><span class="st">★★★★★</span> 5.0 · 93 reseñas</div>
+          <div class="prow"><div class="price">$82.000</div>
+            <button class="add" onclick="addToCart(12)" aria-label="Agregar"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12h14"/></svg></button></div>
+        </div>
+      </div>
+      <div class="empty" id="noRes" style="display:none">No encontramos productos para esa búsqueda.</div>
+    </div>
+  </div>
+</section>
+
+<!-- SERVICES -->
+<div class="services" id="servicios">
+  <div class="wrap">
+    <div class="shead reveal">
+      <div>
+        <span class="eyebrow">Tratamientos</span>
+        <h2 class="display" style="margin-top:.5rem;color:#fff">Estética avanzada,<br><em style="color:var(--green)">resultados naturales</em></h2>
+      </div>
+      <p class="lead" style="max-width:340px">Procedimientos seguros realizados por especialistas. Toda cita incluye valoración personalizada.</p>
+    </div>
+    <div class="svc-list" id="svcList">
+      <div class="svc reveal">
+        <div class="num">01</div>
+        <div class="nm"><b>Toxina Botulínica</b></div>
+        <div class="ds">Suaviza arrugas de expresión bloqueando las señales nerviosas en el músculo, para una apariencia fresca y juvenil.</div>
+        <div class="rt"><div class="from">Desde $380.000</div>
+          <button class="btn btn-wa btn-sm" onclick="bookService('Toxina Botulínica')"><span>Agendar</span></button></div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">02</div>
+        <div class="nm"><b>Ácido Hialurónico</b></div>
+        <div class="ds">Hidrata y rejuvenece el rostro, mejora arrugas y aporta volumen de forma natural y segura.</div>
+        <div class="rt"><div class="from">Desde $450.000</div>
+          <button class="btn btn-wa btn-sm" onclick="bookService('Ácido Hialurónico')"><span>Agendar</span></button></div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">03</div>
+        <div class="nm"><b>Plasma Facial (PRP)</b></div>
+        <div class="ds">Rico en plaquetas: retrasa el envejecimiento, mejora la textura y aporta luminosidad.</div>
+        <div class="rt"><div class="from">Desde $320.000</div>
+          <button class="btn btn-wa btn-sm" onclick="bookService('Plasma Facial (PRP)')"><span>Agendar</span></button></div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">04</div>
+        <div class="nm"><b>Limpieza Facial Profunda</b></div>
+        <div class="ds">Purifica, exfolia e hidrata. Elimina impurezas y deja la piel radiante y renovada.</div>
+        <div class="rt"><div class="from">Desde $120.000</div>
+          <button class="btn btn-wa btn-sm" onclick="bookService('Limpieza Facial Profunda')"><span>Agendar</span></button></div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">05</div>
+        <div class="nm"><b>Mesoterapia Capilar</b></div>
+        <div class="ds">Microinyecciones que nutren el cuero cabelludo, fortalecen el folículo y frenan la caída.</div>
+        <div class="rt"><div class="from">Desde $180.000</div>
+          <button class="btn btn-wa btn-sm" onclick="bookService('Mesoterapia Capilar')"><span>Agendar</span></button></div>
+      </div>
+      <div class="svc reveal">
+        <div class="num">06</div>
+        <div class="nm"><b>Peeling Químico</b></div>
+        <div class="ds">Renovación celular para manchas, cicatrices de acné y textura irregular. Piel uniforme.</div>
+        <div class="rt"><div class="from">Desde $200.000</div>
+          <button class="btn btn-wa btn-sm" onclick="bookService('Peeling Químico')"><span>Agendar</span></button></div>
+      </div>
+    </div>
+    <p class="svc-note">Los valores son orientativos. Escríbenos para tu valoración y plan personalizado.</p>
+  </div>
+</div>
+
+<!-- RESERVAS -->
+<section class="section reserva" id="reservas">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow c">Reservas</span>
+      <h2 class="display" style="margin-top:.5rem">Agenda tu <em>cita</em> en minutos</h2>
+      <p class="lead">Elige tu tratamiento, fecha y hora. Confirmamos tu cupo al instante por WhatsApp.</p>
+    </div>
+    <div class="res-grid">
+      <div class="res-info reveal">
+        <h3>¿Cómo funciona?</h3>
+        <p>Sin llamadas ni esperas. Completas el formulario y nuestro equipo confirma tu disponibilidad enseguida.</p>
+        <ul class="res-steps">
+          <li><span class="n">1</span><div><b>Elige tu tratamiento</b> y el momento que más te convenga.</div></li>
+          <li><span class="n">2</span><div><b>Envía la solicitud</b> por WhatsApp con un clic.</div></li>
+          <li><span class="n">3</span><div><b>Recibe tu confirmación</b> y llega a tu cita. Así de fácil.</div></li>
+        </ul>
+        <div class="res-hours">
+          <h4>Horario de atención</h4>
+          <ul>
+            <li>Lunes a viernes <span>9:00 a. m. – 6:00 p. m.</span></li>
+            <li>Sábados <span>9:00 a. m. – 1:00 p. m.</span></li>
+            <li>Domingos y festivos <span>Cerrado</span></li>
+            <li>Ubicación <span>Torre B · Consultorio 202, Pasto</span></li>
+          </ul>
+        </div>
+      </div>
+      <div class="res-form reveal">
+        <h3>Solicitar cita</h3>
+        <div class="sub">Todos los campos con * son obligatorios.</div>
+        <div class="field">
+          <label for="rTreat">Tratamiento *</label>
+          <select id="rTreat"><option value="" disabled selected>Selecciona un tratamiento…</option><option>Toxina Botulínica</option><option>Ácido Hialurónico</option><option>Plasma Facial (PRP)</option><option>Limpieza Facial Profunda</option><option>Mesoterapia Capilar</option><option>Peeling Químico</option><option>Asesoría de productos</option><option>Otro / aún no estoy seguro</option></select>
+        </div>
+        <div class="field">
+          <label for="rDate">Fecha *</label>
+          <input type="date" id="rDate" />
+        </div>
+        <div class="field">
+          <label for="rName">Nombre completo *</label>
+          <input type="text" id="rName" placeholder="Tu nombre" />
+        </div>
+        <div class="field">
+          <label>Hora preferida *</label>
+          <div class="slots" id="rSlots"><button type="button" onclick="pickSlot(this,'09:00')">09:00</button><button type="button" onclick="pickSlot(this,'10:00')">10:00</button><button type="button" onclick="pickSlot(this,'11:00')">11:00</button><button type="button" onclick="pickSlot(this,'12:00')">12:00</button><button type="button" onclick="pickSlot(this,'14:00')">14:00</button><button type="button" onclick="pickSlot(this,'15:00')">15:00</button><button type="button" onclick="pickSlot(this,'16:00')">16:00</button><button type="button" onclick="pickSlot(this,'17:00')">17:00</button></div>
+        </div>
+        <div class="field">
+          <label for="rPhone">Teléfono / WhatsApp *</label>
+          <input type="tel" id="rPhone" placeholder="Ej: 320 000 0000" />
+        </div>
+        <div class="field">
+          <label for="rNotes">Notas (opcional)</label>
+          <textarea id="rNotes" placeholder="Cuéntanos si tienes alguna preferencia o consulta."></textarea>
+        </div>
+        <div class="res-err" id="rErr"></div>
+        <button class="btn btn-wa" onclick="reservar()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg><span>Reservar por WhatsApp</span></button>
+        <div class="fine">Recibirás confirmación de disponibilidad en breve.</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- WHY -->
+<section class="section" id="nosotros">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow c">Por qué DermoCapilar</span>
+      <h2 class="display" style="margin-top:.5rem">La experiencia que <em>marca la diferencia</em></h2>
+    </div>
+    <div class="why">
+      <div class="w big reveal"><div class="ic" style="background:rgba(255,255,255,.18)"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M9 3h6M10 3v5.2a2 2 0 0 1-.3 1.05L5.2 17a2 2 0 0 0 1.7 3h10.2a2 2 0 0 0 1.7-3l-4.5-7.75A2 2 0 0 1 14 8.2V3"/><path d="M7.5 15h9"/></svg></div><h4>Respaldo científico</h4><p>Formulaciones dermatológicas de marcas certificadas, elegidas una a una por su eficacia real.</p></div>
+      <div class="w reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 21v-2a4 4 0 0 0-4-4H8a4 4 0 0 0-4 4v2"/><circle cx="12" cy="7" r="4"/></svg></div><h4>Especialistas</h4><p>Profesionales con más de 12 años de experiencia en estética y dermocosmética.</p></div>
+      <div class="w reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><rect x="1" y="3" width="15" height="13"/><path d="M16 8h4l3 3v5h-7V8z"/><circle cx="5.5" cy="18.5" r="2.5"/><circle cx="18.5" cy="18.5" r="2.5"/></svg></div><h4>Envío rápido</h4><p>Gratis desde $100.000 a todo Colombia, con empaque seguro y seguimiento.</p></div>
+      <div class="w reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg></div><h4>Asesoría real</h4><p>Te acompañamos por WhatsApp antes, durante y después de cada compra.</p></div>
+      <div class="w reveal"><div class="ic"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M11 20A7 7 0 0 1 4 13c0-4 3-7 7-9 4 2 7 5 7 9a7 7 0 0 1-7 7z"/><path d="M11 20c0-3 0-6 0-9"/></svg></div><h4>Productos originales</h4><p>100% auténticos, con garantía y trazabilidad. Sin falsificaciones.</p></div>
+    </div>
+  </div>
+</section>
+
+<!-- TESTIMONIALS -->
+<section class="section" style="background:var(--cream-2)">
+  <div class="wrap">
+    <div class="center reveal">
+      <span class="eyebrow c">Testimonios</span>
+      <h2 class="display" style="margin-top:.5rem">Historias de <em>piel feliz</em></h2>
+    </div>
+    <div class="tst-grid" id="tstGrid">
+      <div class="tst reveal"><div class="q">"</div><p>Los productos son originales y la asesoría por WhatsApp es súper rápida. Mi piel cambió en pocas semanas.</p><div class="who"><div class="av">L</div><div><b>Laura M.</b><small>Pasto, Nariño</small></div></div></div>
+      <div class="tst reveal"><div class="q">"</div><p>El shampoo anticaída me funcionó de verdad. Envío rápido y todo muy profesional.</p><div class="who"><div class="av">A</div><div><b>Andrés G.</b><small>Ipiales, Nariño</small></div></div></div>
+      <div class="tst reveal"><div class="q">"</div><p>Me hicieron limpieza facial y ácido hialurónico. Resultados naturales y atención de lujo.</p><div class="who"><div class="av">C</div><div><b>Carolina R.</b><small>Pasto, Nariño</small></div></div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="section" id="contacto">
+  <div class="wrap">
+    <div class="cta-band reveal">
+      <div class="aur"><span class="x1"></span><span class="x2"></span></div>
+      <h2>¿Lista para verte y <em>sentirte mejor</em>?</h2>
+      <p>Escríbenos por WhatsApp y recibe asesoría personalizada gratuita para elegir tus productos o agendar tu valoración estética.</p>
+      <div class="g">
+        <a href="https://wa.me/573127388081?text=Hola%20DermoCapilar%2C%20quiero%20asesor%C3%ADa%20%F0%9F%98%8A" target="_blank" class="btn btn-wa"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg><span>Escribir por WhatsApp</span></a>
+        <a href="#reservas" class="btn btn-ghost"><span>Reservar una cita</span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="wrap">
+    <div class="f-grid">
+      <div>
+        <a href="#inicio" class="brand-f" aria-label="DermoCapilar"><img src="data:image/png;base64,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" alt="DermoCapilar" /></a>
+        <p class="about">Centro de estética avanzada y dermocosmética en Pasto, Nariño. Ciencia y belleza para tu piel y cabello, con atención cercana y experta.</p>
+        <div class="f-soc">
+          <a href="https://www.instagram.com/dermocapilarpasto/" target="_blank" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M18 2h-3a5 5 0 0 0-5 5v3H7v4h3v8h4v-8h3l1-4h-4V7a1 1 0 0 1 1-1h3z"/></svg></a>
+          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16 8.5a5 5 0 0 0 4 2v-3a2 2 0 0 1-2-2h-3v11a2.5 2.5 0 1 1-2.5-2.5c.2 0 .4 0 .5.05V8.5a5.5 5.5 0 1 0 5.5 5.5z"/></svg></a>
+          <a href="https://wa.me/573127388081" target="_blank" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg></a>
+        </div>
+      </div>
+      <div>
+        <h4>Explora</h4>
+        <ul><li><a href="#inicio">Inicio</a></li><li><a href="#productos">Tienda</a></li><li><a href="#servicios">Tratamientos</a></li><li><a href="#nosotros">Nosotros</a></li></ul>
+      </div>
+      <div>
+        <h4>Categorías</h4>
+        <ul><li><a href="#productos">Cuidado facial</a></li><li><a href="#productos">Cuidado capilar</a></li><li><a href="#productos">Protección solar</a></li><li><a href="#productos">Corporal</a></li></ul>
+      </div>
+      <div>
+        <h4>Contacto</h4>
+        <ul class="f-contact">
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72c.13.96.36 1.9.7 2.81a2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45c.9.34 1.85.57 2.81.7A2 2 0 0 1 22 16.92z"/></svg>(+57) 312 738 8081</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0 1 18 0z"/><circle cx="12" cy="10" r="3"/></svg>CC. Sebastián de Belalcázar, Torre B, Consultorio 202 — Pasto, Nariño</li>
+          <li><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M4 4h16v16H4z"/><path d="m22 6-10 7L2 6"/></svg>dermocapilardc@gmail.com</li>
+        </ul>
+      </div>
+    </div>
+    <div class="f-bottom">
+      <span>© 2026 DermoCapilar · Pasto, Nariño. Todos los derechos reservados.</span>
+      <span>Magnifica tu belleza ✦</span>
+    </div>
+  </div>
+</footer>
+
+<!-- CART DRAWER -->
+<div class="overlay" id="overlay" onclick="closeCart()"></div>
+<aside class="drawer" id="drawer">
+  <div class="head">
+    <h3>Tu carrito</h3>
+    <button class="x" onclick="closeCart()"><svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M18 6 6 18M6 6l12 12"/></svg></button>
+  </div>
+  <div class="cart-items" id="cartItems"></div>
+  <div class="foot" id="cartFoot" style="display:none">
+    <div class="ship" id="shipNote"></div>
+    <div class="total"><span>Total</span><b id="cartTotal">$0</b></div>
+    <button class="btn btn-wa" onclick="checkout()"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2z"/></svg><span>Finalizar pedido por WhatsApp</span></button>
+    <div class="note">Te confirmamos disponibilidad y envío al instante.</div>
+  </div>
+</aside>
+
+<!-- WA FLOAT -->
+<a href="https://wa.me/573127388081?text=Hola%20DermoCapilar%20%F0%9F%91%8B" target="_blank" class="wa" aria-label="WhatsApp"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2a10 10 0 0 0-8.5 15.2L2 22l4.9-1.5A10 10 0 1 0 12 2zm0 18a8 8 0 0 1-4.1-1.1l-.3-.2-2.9.9.9-2.8-.2-.3A8 8 0 1 1 12 20zm4.4-6c-.2-.1-1.4-.7-1.6-.8s-.4-.1-.5.1-.6.8-.8.9-.3.2-.5 0a6.5 6.5 0 0 1-1.9-1.2 7.2 7.2 0 0 1-1.3-1.7c-.1-.2 0-.4.1-.5l.3-.4.2-.4v-.4l-.7-1.8c-.2-.5-.4-.4-.5-.4h-.5a1 1 0 0 0-.7.3 3 3 0 0 0-.9 2.2 5.2 5.2 0 0 0 1.1 2.7 12 12 0 0 0 4.6 4c.6.3 1.1.4 1.5.6a3.6 3.6 0 0 0 1.6.1 2.7 2.7 0 0 0 1.8-1.3 2.2 2.2 0 0 0 .2-1.2c-.1-.2-.3-.2-.5-.3z"/></svg></a>
+
+<!-- TOAST -->
+<div class="toast" id="toast"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M20 6 9 17l-5-5"/></svg><span id="toastMsg">Agregado</span></div>
+
+<script>
+document.documentElement.classList.add("js");
+const WA="573127388081";
+const money=n=>"$"+n.toLocaleString("es-CO");
+const PRODUCTS={
+1:{name:"Sérum Vitamina C 15%",price:89000},2:{name:"Protector Solar FPS 50+",price:76000},
+3:{name:"Ácido Hialurónico Puro",price:95000},4:{name:"Shampoo Anticaída",price:68000},
+5:{name:"Retinol Nocturno",price:112000},6:{name:"Ampolla Capilar Reparadora",price:42000},
+7:{name:"Crema Corporal Reafirmante",price:73000},8:{name:"Limpiador Facial Suave",price:54000},
+9:{name:"Tónico Niacinamida 10%",price:64000},10:{name:"Aceite Capilar Nutritivo",price:58000},
+11:{name:"Exfoliante Corporal Café",price:48000},12:{name:"Contorno de Ojos Antiedad",price:82000}
+};
+
+/* filtros y busqueda (mejora; sin JS igual se ven todos los productos) */
+window.__cat="Todos";
+function filterCat(cat,btn){window.__cat=cat;document.querySelectorAll("#pills button").forEach(b=>b.classList.remove("active"));if(btn)btn.classList.add("active");applyFilter();}
+function applyFilter(){
+  const cat=window.__cat||"Todos";const s=document.getElementById("search");const q=s?(s.value||"").toLowerCase():"";
+  let shown=0;
+  document.querySelectorAll("#grid .card").forEach(c=>{
+    const okCat=cat==="Todos"||c.getAttribute("data-cat")===cat;
+    const okQ=!q||(c.getAttribute("data-name")||"").toLowerCase().includes(q);
+    const vis=okCat&&okQ;c.style.display=vis?"":"none";if(vis)shown++;
+  });
+  const e=document.getElementById("noRes");if(e)e.style.display=shown?"none":"block";
+}
+(function(){const s=document.getElementById("search");if(s)s.addEventListener("input",applyFilter);})();
+
+/* carrito (guarda en memoria durante la sesion y se muestra al instante) */
+let cart=[];
+function addToCart(id){const p=PRODUCTS[id];if(!p)return;const it=cart.find(x=>x.id===id);if(it)it.qty++;else cart.push({id:id,name:p.name,price:p.price,qty:1});updateCart();showToast(p.name+" agregado");openCart();}
+function changeQty(id,d){const it=cart.find(x=>x.id===id);if(!it)return;it.qty+=d;if(it.qty<=0)cart=cart.filter(x=>x.id!==id);updateCart();}
+function removeItem(id){cart=cart.filter(x=>x.id!==id);updateCart();}
+function cartTotal(){return cart.reduce((s,x)=>s+x.price*x.qty,0);}
+const CIPH='<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.4" width="26" height="26" style="color:var(--muted-2);opacity:.55"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg>';
+function updateCart(){
+  const n=cart.reduce((s,x)=>s+x.qty,0);
+  const cc=document.getElementById("cartCount");if(cc)cc.textContent=n;
+  const box=document.getElementById("cartItems"),foot=document.getElementById("cartFoot");if(!box)return;
+  if(!cart.length){box.innerHTML='<div class="cart-empty"><div class="big"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.3" width="52" height="52"><rect x="3" y="3" width="18" height="18" rx="2"/><circle cx="8.5" cy="8.5" r="1.6"/><path d="m21 15-5-5L5 21"/></svg></div><b>Tu carrito está vacío</b><p style="margin-top:6px">Agrega productos para empezar tu pedido.</p></div>';foot.style.display="none";return;}
+  box.innerHTML=cart.map(x=>'<div class="ci"><div class="th">'+CIPH+'</div><div class="in"><b>'+x.name+'</b><div class="p">'+money(x.price)+'</div><div class="qty"><button onclick="changeQty('+x.id+',-1)" aria-label="menos">−</button><span>'+x.qty+'</span><button onclick="changeQty('+x.id+',1)" aria-label="mas">+</button></div></div><button class="rm" onclick="removeItem('+x.id+')">Quitar</button></div>').join("");
+  foot.style.display="block";
+  const total=cartTotal();document.getElementById("cartTotal").textContent=money(total);
+  const pct=Math.min(100,Math.round(total/100000*100));const ship=document.getElementById("shipNote");
+  ship.innerHTML=(total>=100000?"¡Tienes <b>envío gratis</b>!":"Agrega <b>"+money(100000-total)+"</b> más para envío gratis")+'<div class="bar"><i style="width:'+pct+'%"></i></div>';
+}
+function openCart(){document.getElementById("drawer").classList.add("open");document.getElementById("overlay").classList.add("open");}
+function closeCart(){document.getElementById("drawer").classList.remove("open");document.getElementById("overlay").classList.remove("open");}
+function checkout(){if(!cart.length)return;let m="¡Hola DermoCapilar! Quiero hacer este pedido:\n\n";cart.forEach(x=>{m+="• "+x.qty+"x "+x.name+" — "+money(x.price*x.qty)+"\n";});m+="\n*Total: "+money(cartTotal())+"*\n\n¿Me confirman disponibilidad y envío?";window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank");}
+
+/* reservas */
+(function(){const rDate=document.getElementById("rDate");if(rDate){const t=new Date();rDate.min=new Date(t-t.getTimezoneOffset()*60000).toISOString().slice(0,10);}})();
+let selectedSlot="";
+function pickSlot(el,t){selectedSlot=t;document.querySelectorAll("#rSlots button").forEach(b=>b.classList.remove("on"));el.classList.add("on");}
+function bookService(name){const s=document.getElementById("rTreat");if(s)s.value=name;const r=document.getElementById("reservas");if(r)r.scrollIntoView({behavior:"smooth"});}
+function reservar(){
+  const treat=document.getElementById("rTreat").value,date=document.getElementById("rDate").value,name=document.getElementById("rName").value.trim(),phone=document.getElementById("rPhone").value.trim(),notes=document.getElementById("rNotes").value.trim();
+  const err=document.getElementById("rErr");const miss=[];
+  if(!treat)miss.push("tratamiento");if(!date)miss.push("fecha");if(!selectedSlot)miss.push("hora");if(!name)miss.push("nombre");if(!phone)miss.push("teléfono");
+  if(miss.length){err.textContent="Por favor completa: "+miss.join(", ")+".";err.style.display="block";return;}
+  err.style.display="none";
+  const fecha=new Date(date+"T00:00:00").toLocaleDateString("es-CO",{weekday:"long",day:"numeric",month:"long",year:"numeric"});
+  let m="¡Hola DermoCapilar! Quiero reservar una cita:\n\n";
+  m+="• *Tratamiento:* "+treat+"\n"+"• *Fecha:* "+fecha+"\n"+"• *Hora:* "+selectedSlot+"\n"+"• *Nombre:* "+name+"\n"+"• *Teléfono:* "+phone+"\n";
+  if(notes)m+="• *Notas:* "+notes+"\n";
+  m+="\n¿Me confirman disponibilidad? Gracias.";
+  window.open("https://wa.me/"+WA+"?text="+encodeURIComponent(m),"_blank");showToast("Abriendo WhatsApp con tu reserva…");
+}
+
+/* toast */
+let tT;function showToast(m){const t=document.getElementById("toast");if(!t)return;document.getElementById("toastMsg").textContent=m;t.classList.add("show");clearTimeout(tT);tT=setTimeout(()=>t.classList.remove("show"),1700);}
+
+/* header, progreso, glow */
+const header=document.getElementById("header"),prog=document.getElementById("progress"),glow=document.getElementById("glow");
+addEventListener("scroll",()=>{if(header)header.classList.toggle("scrolled",scrollY>20);if(prog){const h=document.documentElement.scrollHeight-innerHeight;prog.style.width=(scrollY/h*100)+"%";}});
+if(matchMedia("(pointer:fine)").matches&&glow){addEventListener("mousemove",e=>{glow.style.left=e.clientX+"px";glow.style.top=e.clientY+"px";glow.style.opacity=1;});}
+
+/* reveal con failsafe */
+const reveals=document.querySelectorAll(".reveal");
+function revealAll(){reveals.forEach(el=>el.classList.add("in"));}
+if("IntersectionObserver" in window){
+  const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add("in");io.unobserve(e.target);}}),{threshold:.06,rootMargin:"0px 0px -6% 0px"});
+  reveals.forEach(el=>io.observe(el));setTimeout(revealAll,1600);
+}else{revealAll();}
+addEventListener("load",()=>setTimeout(revealAll,1800));
+
+/* contador hero */
+(function(){const hs=document.getElementById("heroStat");if(!hs||!("IntersectionObserver" in window))return;const o=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){let c=0;const iv=setInterval(()=>{c+=12;if(c>=500){c=500;clearInterval(iv);}hs.textContent=c+"+";},20);o.unobserve(e.target);}}),{threshold:.5});o.observe(hs);})();
+
+updateCart();
+</script>
+</body>
+</html>
